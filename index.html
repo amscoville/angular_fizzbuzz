@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html ng-app="fizz-buzz">
+<html ng-app="fizzBuzz">
   <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <title>Angular FizzBuzz</title>
   </head>
-  <body>
-    <div class="display">
-      
+  <body ng-controller="FizzBuzzController as fbCtrl">
+    <div ng-repeat="number in fbCtrl.numbers track by $index">
+        <div ng-class="{'fizz' : number === 'FIZZ', 'buzz' : number === 'BUZZ', 'fizzbuzz' : number === 'FIZZBUZZ'}">{{number}}</div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controller.js"></script>
   </body>
 </html>
